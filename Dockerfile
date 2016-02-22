@@ -12,8 +12,9 @@ RUN apk add --update curl telnet &&\
   ln -s /opt/apache-tomcat-${TOMCAT_VERSION_FULL} /opt/tomcat && \
   rm -rf /opt/tomcat/webapps/* && rm -f ${CATALINA_HOME}/bin/*.bat ${CATALINA_HOME}/bin/*.tar.gz && \
   curl -fSL "$LOG4J_URL" -o log4j.tar.gz && \
-  tar -xf log4j.tar.gz &&\
-  cp apache-log4j-$LOG4J_VERSION/log4j-*.jar $CATALINA_HOME/lib/ && \
+  tar -xf log4j.tar.gz 
+  
+RUN  cp apache-log4j-$LOG4J_VERSION/log4j-*.jar ${CATALINA_HOME}/lib/ && \
   rm -rf apache-log4j-$LOG4J_VERSION 
 
 
