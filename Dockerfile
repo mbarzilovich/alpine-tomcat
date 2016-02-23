@@ -16,6 +16,7 @@ RUN apk add --update curl tar &&\
   cp apache-log4j-$LOG4J_VERSION/log4j-*.jar ${CATALINA_HOME}/lib/ && \
   rm -rf apache-log4j-$LOG4J_VERSION 
 
+COPY log4j.xml $CATALINA_HOME/lib/log4j.xml
 
 EXPOSE 8080
 
