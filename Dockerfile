@@ -6,7 +6,7 @@ ENV CATALINA_HOME /opt/tomcat
 ENV LOG4J_VERSION 1.2.17
 ENV LOG4J_URL http://www.us.apache.org/dist/logging/log4j/$LOG4J_VERSION/log4j-$LOG4J_VERSION.tar.gz
 
-RUN apk add --update curl tar &&\
+RUN apk add --no-cache curl tar &&\
   curl -kLsS https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_VERSION_MAJOR}/v${TOMCAT_VERSION_FULL}/bin/apache-tomcat-${TOMCAT_VERSION_FULL}.tar.gz \
     | gunzip -c - | tar -xf - -C /opt && \
   ln -s /opt/apache-tomcat-${TOMCAT_VERSION_FULL} /opt/tomcat && \
