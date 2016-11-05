@@ -1,7 +1,7 @@
 FROM anapsix/alpine-java:8_server-jre_unlimited
 
 ENV TOMCAT_VERSION_MAJOR 8
-ENV TOMCAT_VERSION_FULL 8.0.37
+ENV TOMCAT_VERSION_FULL 8.0.38
 ENV CATALINA_HOME /opt/tomcat
 ENV LOG4J_VERSION 1.2.17
 ENV LOG4J_URL http://www.us.apache.org/dist/logging/log4j/$LOG4J_VERSION/log4j-$LOG4J_VERSION.tar.gz
