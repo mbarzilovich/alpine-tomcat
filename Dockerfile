@@ -1,10 +1,10 @@
 FROM anapsix/alpine-java:8_server-jre_unlimited
 
 ENV TOMCAT_VERSION_MAJOR 8
-ENV TOMCAT_VERSION_FULL 8.0.37
+ENV TOMCAT_VERSION_FULL 8.0.39
 ENV CATALINA_HOME /opt/tomcat
 ENV LOG4J_VERSION 1.2.17
-ENV LOG4J_URL http://www.us.apache.org/dist/logging/log4j/$LOG4J_VERSION/log4j-$LOG4J_VERSION.tar.gz
+ENV LOG4J_URL http://archive.apache.org/dist/logging/log4j/$LOG4J_VERSION/log4j-$LOG4J_VERSION.tar.gz
 
 RUN apk add --no-cache curl tar &&\
   curl -kLsS https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_VERSION_MAJOR}/v${TOMCAT_VERSION_FULL}/bin/apache-tomcat-${TOMCAT_VERSION_FULL}.tar.gz \
